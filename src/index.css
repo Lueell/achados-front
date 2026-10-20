@@ -1,0 +1,151 @@
+:root {
+  --terracota: #C2410C;
+  --terracota-escuro: #9A3412;
+  --oliva: #14532D;
+  --cinza-oliva: #6B7280;
+  --creme: #FFFBEB;
+  --texto: #292524;
+  --borda: #E8DCC0;
+  --branco: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--texto);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+a { color: var(--oliva); }
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+h2 { color: var(--oliva); margin: 0 0 1rem; }
+
+/* ---------- Cabeçalho ---------- */
+.topo {
+  background: var(--terracota);
+  color: var(--creme);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.topo a { color: var(--creme); text-decoration: none; }
+.topo h1 { margin: 0; font-size: 1.6rem; font-family: Georgia, serif; }
+.saudacao { font-size: .95rem; opacity: .95; }
+
+/* ---------- Campos ---------- */
+input, select, textarea {
+  font: inherit;
+  padding: .55rem .75rem;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  color: var(--texto);
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--terracota);
+  border-color: var(--terracota);
+}
+textarea { min-height: 90px; resize: vertical; }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  background: var(--terracota);
+  color: var(--creme);
+  border: 1px solid var(--terracota);
+  padding: .55rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover { background: var(--terracota-escuro); border-color: var(--terracota-escuro); }
+.btn.secundario { background: transparent; color: var(--oliva); border-color: var(--oliva); }
+.btn.secundario:hover { background: var(--oliva); color: var(--creme); }
+.btn.perigo { background: #991B1B; border-color: #991B1B; }
+.btn.perigo:hover { background: #7F1D1D; border-color: #7F1D1D; }
+.btn:disabled { opacity: .6; cursor: not-allowed; }
+
+/* ---------- Home ---------- */
+.barra-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.barra-titulo h2 { margin: 0; }
+
+.filtros { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.5rem; }
+.filtros input { flex: 1; min-width: 220px; }
+
+.lista { display: grid; gap: .8rem; }
+
+.card {
+  display: block;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-left: 5px solid var(--terracota);
+  border-radius: 10px;
+  padding: .9rem 1.1rem;
+  color: var(--texto);
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+}
+.card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, .1); transform: translateY(-2px); }
+.card h3 { margin: 0 0 .2rem; color: var(--terracota); }
+.meta { margin: 0 0 .5rem; color: var(--cinza-oliva); font-size: .95rem; }
+
+.status {
+  display: inline-block;
+  padding: .1rem .7rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.status.aguardando { background: #FFEDD5; color: var(--terracota-escuro); }
+.status.devolvido  { background: #DCFCE7; color: var(--oliva); }
+
+/* ---------- Formulário ---------- */
+.formulario { display: grid; gap: 1rem; }
+.formulario label { display: grid; gap: .3rem; font-weight: 600; color: var(--oliva); }
+
+/* ---------- Detalhe ---------- */
+.voltar { display: inline-block; margin-bottom: 1rem; font-weight: 600; text-decoration: none; }
+.voltar:hover { text-decoration: underline; }
+.acoes { display: flex; gap: .6rem; flex-wrap: wrap; margin: 1.2rem 0; }
+
+.confirmacao {
+  background: #FFEDD5;
+  border: 1px solid var(--terracota);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.confirmacao .btn { margin-right: .5rem; }
+
+.devolucao {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.devolucao h3 { margin: 0 0 .6rem; color: var(--oliva); }
+.devolucao input { margin-right: .5rem; min-width: 220px; }
+
+/* ---------- Mensagens ---------- */
+.mensagem { padding: .6rem .9rem; border-radius: 8px; margin: .5rem 0; }
+.mensagem.erro { background: #FEE2E2; color: #991B1B; }
+.mensagem.sucesso { background: #DCFCE7; color: var(--oliva); }
