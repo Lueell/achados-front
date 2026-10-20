@@ -1,2 +1,3 @@
+<img width="1887" height="980" alt="tela-inicial" src="https://github.com/user-attachments/assets/e9f2de74-1d5a-4e76-9f02-80fc8b111bcd" />
 
-<img width="1887" height="980" alt="image" src="https://github.com/user-attachments/assets/e371f125-57d2-4953-9a6f-ef8df0a54937" />
+
